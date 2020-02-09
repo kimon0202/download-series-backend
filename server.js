@@ -17,4 +17,4 @@ app.post('/entries', EntryController.store);
 app.get('/entries', EntryController.index);
 app.delete('/entries/:id', EntryController.destroy);
 
-app.listen(3333, () => console.log('Server running on port 3333'));
+app.listen(process.env.PORT || 3333);
