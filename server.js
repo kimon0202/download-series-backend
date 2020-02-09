@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://root:rootpassword@cluster0-srmct.mongodb.net/test', {
+mongoose.connect(process.env.MONGO_URL || 'mongodb+srv://root:rootpassword@cluster0-srmct.mongodb.net/test', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
